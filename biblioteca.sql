@@ -111,4 +111,4 @@ DESC LIMIT 3;
 
 -- d. Si se cobrara una multa de $100 por cada día de atraso, mostrar cuánto
 -- debería pagar cada usuario que entregue el préstamo después de 7 días.
-
+-- SELECT fecha_prestamo, fecha_devolucion FROM prestamos

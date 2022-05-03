@@ -111,4 +111,5 @@ DESC LIMIT 3;
 
 -- d. Si se cobrara una multa de $100 por cada día de atraso, mostrar cuánto
 -- debería pagar cada usuario que entregue el préstamo después de 7 días.
--- SELECT fecha_prestamo, fecha_devolucion FROM prestamos
+
+SELECT fecha_prestamo,fecha_devolucion,nombre, apellido,((fecha_devolucion-fecha_prestamo)-7) AS dias_atraso,(100*((fecha_devolucion- fecha_prestamo)-7)) AS multa FROM prestamo FULL OUTER JOIN socio ON rut = rut_socio WHERE((100*(fecha_devolucion- fecha_prestamo))>700);
